@@ -1,0 +1,186 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;1,200;1,300;1,400&display=swap');
+
+ :root{
+    --primary-color:#4daf54;
+ }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: white;
+    height: 100vh;
+    background-image: linear-gradient(to right, #4daf54, #3d8880);
+    font-family: 'Poppins';
+}
+.card-container{
+    margin: 120px auto;
+    height: 400px;
+    width: 300px;
+    background-color: rgb(47, 46, 46);
+    border-radius: 15px;
+    position: relative;
+    padding: 20px;
+
+}
+.card-heart{
+    position: absolute;
+    color: white;
+    font-size: 25px;
+    font-weight: 200;
+    left:10px;
+    top:10px;
+}
+.card-cart{
+    position: absolute;
+    color: white;
+    font-size: 25px;
+    font-weight: 200;
+    right:10px;
+    top:10px;
+
+}
+.card-image{
+    /* margin-left: 0px; */
+    width: 100%;
+    object-fit: cover;
+
+}
+.card-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 10px;
+
+}
+.card-mid{
+    text-align: center;
+}
+.card-name{
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--primary-color)
+}
+.card-price{
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+}
+.card-size{
+    margin-top: 40px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+.card-size span{
+    padding:0 8px;
+    background-color: white;
+    color: black;
+    margin: 0px 0px 0px 15px;
+    border-radius: 20%;
+}
+.card-color{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+.card-color span{
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+.color-red{
+    background: red;
+}
+.color-green{
+    background: green;
+}
+.color-black{
+    background: black;
+}
+.card-actions{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.card-actions button{
+    background-color: var(--primary-color);
+    padding: 8px 17px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 15px 20px;
+}
+.card-bottom{
+    margin-top:20px;
+    visibility: hidden;
+    opacity: 0;
+}
+.card-container:hover .card-image{
+    transform: translateY(-50px) rotate(-20deg);
+    transition: 0.5s;
+    width: 90%;
+}
+.card-container:hover .card-name{
+    transform: translate(-50px, -40px) scale(75%);
+    transition: 0.5s;
+}
+.card-container:hover .card-price{
+    transform: translate(-80px, -50px) scale(75%);
+    transition: 0.5s;
+}
+.card-container:hover .card-bottom{
+    transform: translateY(-60px);
+    transition: 0.5s;
+    visibility: visible;
+    opacity: 100;
+}
+.card-actions button:hover{
+    transform:  scale(90%);
+    transition: 0.5s;
+}
+
+/***************************************************/
+.card-container:not(:hover) .card-image{
+    transform: translateY(0px) rotate(0deg);
+    transition: 0.15s;
+    width: 100%;
+}
+.card-container:not(:hover) .card-name{
+    transform: translate(0px, 0px) scale(100%);
+    transition: 0.15s;
+}
+.card-container:not(:hover) .card-price{
+    transform: translate(0px, 0px) scale(100%);
+    transition: 0.15s;
+}
+.card-container:not(:hover) .card-bottom{
+    transform: translateY(0px);
+    transition: 0.15s;
+    visibility: hidden;
+    opacity: 0;
+}
+.card-actions button:not(:hover){
+    transform:  scale(100%);
+    transition: 0.15s;
+}
+
+/*************************************************/
+.backHome{
+    position: absolute;
+    top: 30px;
+    margin: 30px;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(84, 84, 228);
+    color: azure;
+}
